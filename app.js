@@ -1,6 +1,6 @@
 'use strict';
 
-const DEFAULT_RATE = 4.15;
+const DEFAULT_RATE = 4.2419;
 const eurInput = document.querySelector('#eur-amount');
 const sarInput = document.querySelector('#sar-amount');
 const rateInput = document.querySelector('#rate-input');
