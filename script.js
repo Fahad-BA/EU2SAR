@@ -1,4 +1,4 @@
-const RATE = 4.15;
+const RATE = 4.2419;
 const eurInput = document.querySelector('#eur');
 const sarInput = document.querySelector('#sar');
 const arabicDigits = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
