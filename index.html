@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="A simple, elegant EUR to SAR and SAR to EUR currency converter.">
+  <title>EU2SAR — Currency Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="EU2SAR home"><span class="brand-mark">€</span><span>EU<span class="brand-accent">2</span>SAR</span></a>
+      <span class="top-note"><span class="live-dot"></span> Simple currency conversion</span>
+    </header>
+
+    <section class="hero" aria-labelledby="title">
+      <div class="eyebrow"><span class="eyebrow-line"></span> EUROPEAN EURO <span class="eyebrow-arrow">↔</span> SAUDI RIYAL <span class="eyebrow-line"></span></div>
+      <h1 id="title">Your money,<br><span>made clear.</span></h1>
+      <p class="intro">Convert between euros and Saudi riyals with a rate you can trust—and adjust whenever you need.</p>
+
+      <section class="converter" aria-label="Currency converter">
+        <div class="converter-heading"><div><p class="section-kicker">CURRENCY CONVERTER</p><h2>Make your move</h2></div><div class="rate-pill"><span class="live-dot"></span><span id="rate-status">Rate ready</span></div></div>
+        <div class="amount-grid">
+          <label class="currency-card" for="eur-amount">
+            <span class="field-label">YOU SEND</span>
+            <span class="currency-select"><span class="currency-symbol euro-symbol">€</span><span class="currency-name">Euro <small>EUR</small></span></span>
+            <input id="eur-amount" type="number" inputmode="decimal" min="0" step="any" value="100" aria-label="Amount in euros">
+          </label>
+          <button class="swap-button" id="swap-button" type="button" aria-label="Swap conversion direction" title="Swap direction"><span>↕</span></button>
+          <label class="currency-card receive-card" for="sar-amount">
+            <span class="field-label">YOU RECEIVE</span>
+            <span class="currency-select"><span class="currency-symbol sar-symbol">ر.س</span><span class="currency-name">Saudi Riyal <small>SAR</small></span></span>
+            <input id="sar-amount" type="number" inputmode="decimal" min="0" step="any" value="415" aria-label="Amount in Saudi riyals">
+          </label>
+        </div>
+        <div class="rate-row"><span>Exchange rate</span><span class="rate-value" id="rate-display">1 EUR = 4.1500 SAR</span></div>
+        <div class="rate-controls"><label for="rate-input">Set your own rate</label><div class="rate-edit"><span>1 EUR =</span><input id="rate-input" type="number" inputmode="decimal" min="0.0001" step="0.0001" value="4.15" aria-label="Custom SAR per EUR exchange rate"><span>SAR</span><button id="reset-rate" type="button">Reset</button></div></div>
+        <div class="updated-row"><span id="updated-at">Using indicative rate</span><button id="refresh-rate" class="refresh-button" type="button"><span aria-hidden="true">↻</span> Refresh rate</button></div>
+      </section>
+      <p class="disclaimer">Rates are indicative and may differ from the rate offered by your bank or provider.</p>
+    </section>
+    <footer class="footer"><span>EU2SAR</span><span>Built for clear conversions <span class="footer-dot">·</span> EUR ↔ SAR</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
